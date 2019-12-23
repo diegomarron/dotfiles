@@ -1,0 +1,101 @@
+#############################################################################
+##
+#### ACCOUNT SETTINGS
+#
+#############################################################################
+
+set from = "USERNAME"
+set imap_user = "myuser"
+set imap_pass = "mypass"
+
+set folder = "imaps://mail.server.es:993"
+set spoolfile = "+INBOX"
+set record = "+Sent"
+set postponed = "+Drafts"
+set trash = "+Trash"
+
+
+#############################################################################
+##
+#### GENERIC SETTINGS
+#
+#############################################################################
+
+
+# CACHE FILES goes to $HOME/.local/ 
+set header_cache = "~/.local/mutt/cache/headers"
+set message_cachedir = "~/.local/mutt/cache/bodies"
+set folder = "~/.local/mail/"
+
+# How often check for new email (in seconds)
+set mail_check = 60
+
+set imap_check_subscribed = "yes"
+mailboxes +INBOX
+
+set pager_index_lines = 15
+
+
+#############################################################################
+##
+#### MESSAGE RENDER, VIEW, ETC
+#
+#############################################################################
+
+
+# View html automatically
+auto_view text/html 
+# View priority
+alternative_order text/plain text/enriched text/html
+
+set move = no
+set sort = "threads"
+set sort_aux = "reverse-last-date-received"
+
+
+
+#############################################################################
+##
+#### ATTACHMENTS
+#
+#############################################################################
+
+# Offloaded to a file
+set mailcap_path = ~/.config/neomutt/mailcap
+
+
+
+#############################################################################
+##
+#### SIDEBAR CONFIG
+#
+#############################################################################
+
+#set sidebar_format = '%B%?F? [%F]?%* %?N?%N/?%S'
+set sidebar_format = '%B%?F? [%F]?%*'
+set sidebar_width = 20
+
+set mail_check_stats
+set sidebar_sort_method = 'unsorted'
+set sidebar_folder_indent = no
+set sidebar_indent_string = '  '
+set sidebar_new_mail_only = no
+set sidebar_next_new_wrap = yes
+set sidebar_on_right = no
+
+bind index,pager B sidebar-toggle-visible
+
+macro index,pager <f2> "<enter-command>set sidebar_visible=yes<enter><sidebar-next>"
+macro index,pager <f3> "<enter-command>set sidebar_visible=yes<enter><sidebar-prev>"
+macro index,pager <f4> "<sidebar-open><enter-command>set sidebar_visible=no<enter>"
+
+
+
+#############################################################################
+##
+#### CUSTOM THEME
+#
+#############################################################################
+
+source ~/.config/mutt/mutt.theme.dmv
+

@@ -1,0 +1,5 @@
+# dunst
+sudo apt install libdbus-1-dev libx11-dev libxinerama-dev libxrandr-dev libxss-dev libglib2.0-dev libpango1.0-dev libgtk2.0-dev libxdg-basedir-dev
+# json cli
+sudo apt install jq
+

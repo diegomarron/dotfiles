@@ -1,0 +1,35 @@
+
+# ls 
+alias ls="ls --color=auto"
+alias lh='ls -lh'
+alias ll="ls -ahl"
+alias la='lh -Ah'
+alias l='lh -CF'
+
+
+# grep 
+alias grep='grep --color=auto'
+alias ag="grep -iR"
+alias eag="egrep -Ri --color=auto"
+alias fag="fgrep -Ri --color=auto"
+
+# diff
+alias diff="diff --color=auto"
+
+# always ask for confirmation
+alias mv='mv -i'
+alias rm='rm -i'
+alias cp='cp -iv'
+
+# EDITOR
+alias e="$EDITOR"
+alias enw="emacs -nw"
+
+#
+#### OTHER ALIAS
+#
+# now
+alias now='date +"%T"'
+alias nowdate='date +"%d-%m-%Y"'
+
+
