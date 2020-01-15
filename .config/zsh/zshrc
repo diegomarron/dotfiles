@@ -95,6 +95,5 @@ source $HOME/.config/apps
 source $HOME/.config/alias
 
 # add custom scripts to path
-#export PATH=$PATH:$HOME/.config/scripts
-#export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.config/scripts:$HOME/.local/bin
 
