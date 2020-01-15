@@ -62,10 +62,11 @@ ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 
 
 # autosuggestions
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.config/zsh/zsh-autosuggestions.zsh
 
 # FZF bindings
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+source $HOME/.config/zsh/fzf.zsh
 
 
 
@@ -85,7 +86,7 @@ lfcd () {
     fi
 }
 
-#bindkey -s '^o' 'lfcd\n' # zsh
+bindkey -s '^o' 'lfcd\n' # zsh
 
 
 
@@ -94,4 +95,6 @@ source $HOME/.config/apps
 source $HOME/.config/alias
 
 # add custom scripts to path
-export PATH=$PATH:$HOME/.config/scripts
+#export PATH=$PATH:$HOME/.config/scripts
+#export PATH=$PATH:$HOME/.local/bin
+
